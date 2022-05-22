@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity implements Contracts.Counter
 
     @Override
     public void showToast(String toast) {
-        Toast.makeText(this, "Congrats", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Congratulations", Toast.LENGTH_SHORT).show();
     }
 
     @Override
