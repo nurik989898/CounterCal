@@ -2,6 +2,7 @@ package com.example.countercal;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Toast;
@@ -30,13 +31,22 @@ public class MainActivity extends AppCompatActivity implements Contracts.Counter
             @Override
             public void onClick(View view) {
                 presenter.increment();
-                if (presenter == 10) {
-                    Toast.makeText(MainActivity.this, "Congrats", Toast.LENGTH_SHORT).show();
-                }
+                presenter.seeToast();
+                presenter.color();
+
             }
         });
     }
 
+    @Override
+    public void showToast(String toast) {
+        Toast.makeText(this, "Congrats", Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void setColor(String color) {
+binding.counterTv.setTextColor(Color.parseColor(color));
+    }
     @Override
     public void updateText(int count) {
         binding.counterTv.setText(String.valueOf(count));
