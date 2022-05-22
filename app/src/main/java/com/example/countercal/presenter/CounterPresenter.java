@@ -1,7 +1,5 @@
 package com.example.countercal.presenter;
 
-import com.example.counter.model.Model;
-import com.example.counter.view.Contracts;
 import com.example.countercal.model.Model;
 import com.example.countercal.view.Contracts;
 
